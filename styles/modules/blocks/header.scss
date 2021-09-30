@@ -1,12 +1,25 @@
 .header {
-    min-height: $font;
-    width: 100%;
+  min-height: 74px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
 
-    &__links {
-      display: flex;
-    }
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
+  &__link {
+    list-style: none;
+    font-size: 14px;
+    line-height: 106.24%;
+    padding: 30px 34px 30px 0;
 
-    &__link {
-      list-style: none;
+    &:last-of-type {
+      padding-right: 120px;
     }
   }
+}

@@ -1,0 +1,40 @@
+.triathlon {
+    display: flex;
+    justify-content: space-between;
+    min-height: 856px;
+    padding-left: 120px;
+    margin-top: 74px;
+
+    &__title {
+        max-width: 460px;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 90.14%;
+    }
+
+    &__text {
+        max-width: 460px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 128.53%;
+    }
+
+    &__button {
+        display: inline-block;
+        text-align: center;
+        padding: 18px 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 106.24%;
+        text-decoration: none;
+        width: 180px;
+        // height: 50px;
+        border-radius: 4px;
+        background-color: $green;
+        color: $white;
+    }
+
+    &__image {
+        height: 836px;
+    }
+}
