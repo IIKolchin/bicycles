@@ -1,0 +1,12 @@
+.header {
+    min-height: $font;
+    width: 100%;
+
+    &__links {
+      display: flex;
+    }
+
+    &__link {
+      list-style: none;
+    }
+  }
