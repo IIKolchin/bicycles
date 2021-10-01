@@ -1,0 +1,30 @@
+.merks {
+    display: flex;
+
+    &__quote {
+        margin: 0;
+    }
+
+    &__image {
+        margin: 120px 0 60px 120px;
+    }
+
+    &__title {
+        margin: 120px 120px 0 80px;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: -0.5px;
+    }
+
+    &__name {
+        margin: 262px 0 6px 80px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    &__job {
+        margin: 0 0 0 80px;
+    }
+}

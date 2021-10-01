@@ -6,6 +6,7 @@
     margin-top: 74px;
 
     &__title {
+        margin-top: 80px;
         max-width: 460px;
         font-weight: 700;
         font-size: 55px;
@@ -13,6 +14,7 @@
     }
 
     &__text {
+        margin: 50px 0;
         max-width: 460px;
         font-weight: 400;
         font-size: 18px;
@@ -28,13 +30,54 @@
         line-height: 106.24%;
         text-decoration: none;
         width: 180px;
-        // height: 50px;
         border-radius: 4px;
         background-color: $green;
         color: $white;
     }
 
     &__image {
+        margin-top: 20px;
         height: 836px;
+    }
+
+    &__bike {
+        position: relative;
+        display: flex;
+        margin-top: 167px;
+    }
+
+    &__bike-name {
+        margin: 0;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    &__bike-line {
+        width: 132px;
+        height: 2px;
+        background-color: $grayLight;
+        margin: 10px 154px 0 30px;
+    }
+
+    &__bike-hallway {
+        position: absolute;
+        top: -270px;
+        left: 510px;
+        width: 440px;
+        height: 430px;
+    }
+
+    &__bike-container {
+        position: sticky;
+        top: 30px;
+        left: 630px;
+        width: 440px;
+        height: 300px;
+        background: $background;
+        border-radius: 20px;
+    }
+
+    &__bike-image {
+        margin: 20px 50px;
     }
 }
