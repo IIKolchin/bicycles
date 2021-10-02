@@ -1,0 +1,58 @@
+.bicycle {
+    display: flex;
+    justify-content: space-between;
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__button {
+        margin: 92px 40px 140px 0;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 28px;
+        color: #222222;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &-active {
+            color: #151515;
+            font-weight: 600;
+        }
+    }
+
+    &__title {
+        margin: 60px 513px 140px 0;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+    }
+
+    &__pic {
+        margin: 0;
+        display: flex;
+    }
+
+    &__image {
+        margin: 0 20px;
+    }
+
+    &__group {
+        margin: 0 30px 0 0;
+        width: 380px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__name {
+        margin: 42px 0 60px 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
