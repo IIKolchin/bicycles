@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Велосипеды</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body class="page">
@@ -55,7 +59,54 @@
           <p class="merks__job">Велогонщик</p>
         </div>
       </section>
+      <section class="slider">
+        <div class="slider__container swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h2 class="slider__title">Шоссе</h2>
+              <p class="slider__text">
+                На шоссейном велосипеде можно ездить по асфальту на разных
+                градиентах: будь то горы или равнины. Гонки проходят в командном
+                пелотоне, но тренироваться можно и самостоятельно.
+              </p>
+              <div class="slider__pic">
+                <img class="slider__image" src="./images/Highway~.png" alt="" />
+                <img class="slider__image" src="./images/Grevel.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <h2 class="slider__title">Грэвел</h2>
+              <p class="slider__text">
+                Грэвел похож на шоссейный велосипед, но конструкция рамы немного
+                отличается, и на нём стоят более широкие покрышки, всё для того
+                чтобы проехать по лёгкому бездорожью.
+              </p>
+              <div class="slider__pic">
+                <img class="slider__image" src="./images/Grevel~.png" alt="" />
+                <img class="slider__image" src="./images/TT.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <h2 class="slider__title">TT</h2>
+              <p class="slider__text">
+                ТТ — это велосипед для триатлона или раздельного старта, гооняют
+                на таком велике только по равнинному асфальту, велик очень
+                быстрые и аэродинамичный.
+              </p>
+              <div class="slider__pic">
+                <img class="slider__image" src="./images/TT~.png" alt="" />
+                <img class="slider__image" src="./images/Highway.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="slider__buttons">
+            <div class="slider__button-prev"></div>
+            <div class="slider__button-next"></div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
