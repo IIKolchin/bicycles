@@ -52,7 +52,9 @@
   max-width: 460px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 128.53%;
+  line-height: 28px;
+  opacity: 70%;
+  color: #222222;
 }
 .triathlon__button {
   display: inline-block;
@@ -131,4 +133,60 @@
 }
 .merks__job {
   margin: 0 0 0 80px;
+  font-size: 16px;
+  line-height: 28px;
+  opacity: 70%;
+  color: #222222;
+}
+
+.slider {
+  width: 100%;
+}
+.slider__title {
+  margin: 60px 0 50px 120px;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+}
+.slider__text {
+  margin: 0 0 80px 120px;
+  max-width: 460px;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 70%;
+  color: #222222;
+}
+.slider__pic {
+  display: flex;
+  overflow: hidden;
+  margin-left: 120px;
+}
+.slider__image {
+  margin: 0 40px 50px 0;
+}
+.slider__buttons {
+  display: flex;
+  margin-left: 120px;
+}
+.slider__button-prev {
+  background: url(../images/left.svg);
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.slider__button-prev:hover {
+  opacity: 75%;
+}
+.slider__button-next {
+  background: url(../images/right.svg);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.slider__button-next:hover {
+  opacity: 75%;
 }
