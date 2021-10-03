@@ -5,7 +5,11 @@
   top: 0;
   left: 0;
   background-color: $white;
-  z-index: 1;
+  z-index: 10;
+
+  .dark & {
+    background-color: $gray;
+  }
 
   &__links {
     display: flex;
@@ -15,12 +19,31 @@
   }
   &__link {
     list-style: none;
-    font-size: 14px;
-    line-height: 106.24%;
     padding: 30px 34px 30px 0;
 
     &:last-of-type {
       padding-right: 120px;
+    }
+  }
+
+  &__ref {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $black;
+    transition: 0.5s;
+
+    .dark & {
+      color: $white;
+
+      &:hover {
+        opacity: 65%;
+      }
+    }
+
+    &:hover {
+      opacity: 75%;
     }
   }
 }

@@ -1,0 +1,92 @@
+.footer {
+    padding: 80px 120px 60px;
+    background: #efefef;
+
+    .dark & {
+        background: #2f2f2f;
+    }
+
+    &__title {
+        width: 230px;
+        margin-bottom: 50px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    &__group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__switch {
+        display: flex;
+    }
+
+    &__icon-sun {
+        margin-right: 22px;
+        width: 28px;
+        height: 28px;
+        background-image: url(../images/day.svg);
+
+        .dark & {
+            background-image: url(../images/dayGrey.svg);
+        }
+    }
+
+    &__icon-button {
+        margin-right: 22px;
+        width: 44px;
+        height: 24px;
+        border-radius: 20px;
+        background-image: url(../images/switch.svg);
+
+        .dark & {
+            background-image: url(../images/switchGrey.svg);
+        }
+    }
+
+    &__icon-moon {
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/night.svg);
+
+        .dark & {
+            background-image: url(../images/nightGrey.svg);
+        }
+    }
+
+    &__copyright {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 116%;
+        color: #cfcfcf;
+
+        .dark & {
+            color: #565656;
+        }
+    }
+
+    &__form {
+        margin-bottom: 100px;
+    }
+
+    &__input-container {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__input {
+        width: 360px;
+        height: 50px;
+        border-radius: 4px;
+        border-color: rgba(199, 199, 199, 0.5);
+        background-color: #efefef;
+
+        .dark & {
+            background: #2f2f2f;
+        }
+    }
+}
