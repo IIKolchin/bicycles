@@ -7,8 +7,6 @@ new Swiper(".slider__container", {
   loop: true,
 });
 
-let appendNumber = 3;
-let prependNumber = 1;
 const swiper = new Swiper(".bicycles__slider");
 
 document
@@ -52,4 +50,10 @@ buttonTt.addEventListener("click", function () {
   buttonTt.classList.add("bicycle__button-active");
   buttonHighway.classList.remove("bicycle__button-active");
   buttonGrevel.classList.remove("bicycle__button-active");
+});
+
+const switchButton = document.querySelector(".footer__icon-button");
+
+switchButton.addEventListener("click", function () {
+  document.querySelector("html").classList.toggle("dark");
 });

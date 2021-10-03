@@ -1,11 +1,30 @@
 @import "../vendor/normalize.css";
 @import "../vendor/fonts/fonts.css";
+.workout__title, .bicycle__title, .slider__title, .triathlon__title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+}
+
+.workout__text, .bicycle__button, .slider__text, .triathlon__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 70%;
+  color: #222222;
+}
+
 .page {
   font-family: "inter", Arial, sans-serif;
   margin: 0 auto;
   width: 1440px;
   background: #f4f4f4;
   color: #151515;
+}
+.dark .page {
+  background: #333333;
+  color: #fff;
 }
 
 .header {
@@ -15,7 +34,10 @@
   top: 0;
   left: 0;
   background-color: #fff;
-  z-index: 1;
+  z-index: 10;
+}
+.dark .header {
+  background-color: #333333;
 }
 .header__links {
   display: flex;
@@ -25,12 +47,27 @@
 }
 .header__link {
   list-style: none;
-  font-size: 14px;
-  line-height: 106.24%;
   padding: 30px 34px 30px 0;
 }
 .header__link:last-of-type {
   padding-right: 120px;
+}
+.header__ref {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #151515;
+  transition: 0.5s;
+}
+.dark .header__ref {
+  color: #fff;
+}
+.dark .header__ref:hover {
+  opacity: 65%;
+}
+.header__ref:hover {
+  opacity: 75%;
 }
 
 .triathlon {
@@ -43,20 +80,16 @@
 .triathlon__title {
   margin-top: 80px;
   max-width: 460px;
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 90.14%;
 }
 .triathlon__text {
   margin: 50px 0;
   max-width: 460px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  opacity: 70%;
-  color: #222222;
+}
+.dark .triathlon__text {
+  color: #e5e5e5;
 }
 .triathlon__button {
+  position: relative;
   display: inline-block;
   text-align: center;
   padding: 18px 0;
@@ -66,8 +99,13 @@
   text-decoration: none;
   width: 180px;
   border-radius: 4px;
-  background-color: #24b47e;
   color: #fff;
+  background: linear-gradient(to left, #24b47e 50%, #319e75 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+}
+.triathlon__button:hover {
+  background-position: left;
 }
 .triathlon__image {
   margin-top: 20px;
@@ -89,6 +127,9 @@
   background-color: #d7d4d4;
   margin: 10px 154px 0 30px;
 }
+.dark .triathlon__bike-line {
+  background-color: #707070;
+}
 .triathlon__bike-hallway {
   position: absolute;
   top: -270px;
@@ -96,17 +137,11 @@
   width: 440px;
   height: 430px;
 }
-.triathlon__bike-container {
+.triathlon__bike-image {
+  border-radius: 20px;
   position: sticky;
   top: 30px;
   left: 630px;
-  width: 440px;
-  height: 300px;
-  background: #f4f4f4;
-  border-radius: 20px;
-}
-.triathlon__bike-image {
-  margin: 20px 50px;
 }
 
 .merks {
@@ -138,24 +173,22 @@
   opacity: 70%;
   color: #222222;
 }
+.dark .merks__job {
+  color: #e5e5e5;
+}
 
 .slider {
   width: 100%;
 }
 .slider__title {
   margin: 60px 0 50px 120px;
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 60px;
-  letter-spacing: -0.5px;
 }
 .slider__text {
   margin: 0 0 80px 120px;
   max-width: 460px;
-  font-size: 18px;
-  line-height: 28px;
-  opacity: 70%;
-  color: #222222;
+}
+.dark .slider__text {
+  color: #e5e5e5;
 }
 .slider__pic {
   display: flex;
@@ -177,6 +210,12 @@
   cursor: pointer;
   transition: 0.7s;
 }
+.dark .slider__button-prev {
+  background: url(../images/leftGrey.svg);
+}
+.dark .slider__button-prev:hover {
+  opacity: 60%;
+}
 .slider__button-prev:hover {
   opacity: 75%;
 }
@@ -186,6 +225,12 @@
   height: 50px;
   cursor: pointer;
   transition: 0.7s;
+}
+.dark .slider__button-next {
+  background: url(../images/rightGrey.svg);
+}
+.dark .slider__button-next:hover {
+  opacity: 60%;
 }
 .slider__button-next:hover {
   opacity: 75%;
@@ -201,30 +246,38 @@
 .bicycle__button {
   margin: 92px 40px 140px 0;
   cursor: pointer;
-  font-size: 18px;
-  line-height: 28px;
-  color: #222222;
+  transition: 0.5s;
+}
+.dark .bicycle__button {
+  color: #e5e5e5;
+  transition: 0.5s;
+}
+.dark .bicycle__button:hover {
+  opacity: 50%;
 }
 .bicycle__button:last-of-type {
   margin-right: 0;
 }
+.bicycle__button:hover {
+  opacity: 60%;
+}
 .bicycle__button-active {
   color: #151515;
   font-weight: 600;
+  opacity: 1;
+}
+.dark .bicycle__button-active {
+  color: #fff;
 }
 .bicycle__title {
-  margin: 60px 513px 140px 0;
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 60px;
-  letter-spacing: -0.5px;
+  margin: 60px 513px 120px 0;
 }
 .bicycle__pic {
   margin: 0;
   display: flex;
 }
 .bicycle__image {
-  margin: 0 20px;
+  border-radius: 20px;
 }
 .bicycle__group {
   margin: 0 30px 0 0;
@@ -234,12 +287,131 @@
   margin-right: 0;
 }
 .bicycle__name {
-  margin: 42px 0 60px 0;
+  margin: 22px 0 60px 0;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
 }
+.dark .bicycle__name {
+  color: #fff;
+}
+.bicycle__link {
+  text-decoration: none;
+  color: #151515;
+}
 
 .bicycles {
   margin: 0 120px;
+}
+
+.workout {
+  display: flex;
+  padding: 150px 120px 120px;
+}
+.workout__title {
+  margin: 0 160px 50px 0;
+}
+.workout__text {
+  margin: 0 160px 182px 0;
+}
+.dark .workout__text {
+  color: #e5e5e5;
+}
+.workout__link {
+  text-decoration: none;
+  color: #151515;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.dark .workout__link {
+  color: #fff;
+}
+.dark .workout__link:hover {
+  opacity: 65%;
+}
+.workout__link:hover {
+  opacity: 75%;
+}
+.workout__link:first-of-type {
+  margin-right: 30px;
+}
+
+.footer {
+  padding: 80px 120px 60px;
+  background: #efefef;
+}
+.dark .footer {
+  background: #2f2f2f;
+}
+.footer__title {
+  width: 230px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+.footer__group {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__switch {
+  display: flex;
+}
+.footer__icon-sun {
+  margin-right: 22px;
+  width: 28px;
+  height: 28px;
+  background-image: url(../images/day.svg);
+}
+.dark .footer__icon-sun {
+  background-image: url(../images/dayGrey.svg);
+}
+.footer__icon-button {
+  margin-right: 22px;
+  width: 44px;
+  height: 24px;
+  border-radius: 20px;
+  background-image: url(../images/switch.svg);
+}
+.dark .footer__icon-button {
+  background-image: url(../images/switchGrey.svg);
+}
+.footer__icon-moon {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/night.svg);
+}
+.dark .footer__icon-moon {
+  background-image: url(../images/nightGrey.svg);
+}
+.footer__copyright {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 116%;
+  color: #cfcfcf;
+}
+.dark .footer__copyright {
+  color: #565656;
+}
+.footer__form {
+  margin-bottom: 100px;
+}
+.footer__input-container {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.footer__input {
+  width: 360px;
+  height: 50px;
+  border-radius: 4px;
+  border-color: rgba(199, 199, 199, 0.5);
+  background-color: #efefef;
+}
+.dark .footer__input {
+  background: #2f2f2f;
 }

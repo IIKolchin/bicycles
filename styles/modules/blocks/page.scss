@@ -4,4 +4,9 @@
   width: 1440px;
   background: $background;
   color: $black;
+
+  .dark & {
+    background: $gray;
+    color: $white;
+  }
 }

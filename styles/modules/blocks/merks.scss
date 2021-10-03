@@ -30,5 +30,9 @@
         line-height: 28px;
         opacity: 70%;
         color: #222222;
+
+        .dark & {
+            color: #e5e5e5;
+        }
     }
 }

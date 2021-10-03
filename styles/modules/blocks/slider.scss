@@ -3,18 +3,16 @@
 
     &__title {
         margin: 60px 0 50px 120px;
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 60px;
-        letter-spacing: -0.5px;
+        @extend %title-style;
     }
     &__text {
         margin: 0 0 80px 120px;
         max-width: 460px;
-        font-size: 18px;
-        line-height: 28px;
-        opacity: 70%;
-        color: #222222;
+        @extend %text-style;
+
+        .dark & {
+            color: #e5e5e5;
+        }
     }
 
     &__pic {
@@ -40,6 +38,14 @@
         cursor: pointer;
         transition: 0.7s;
 
+        .dark & {
+            background: url(../images/leftGrey.svg);
+
+            &:hover {
+                opacity: 60%;
+            }
+        }
+
         &:hover {
             opacity: 75%;
         }
@@ -51,6 +57,14 @@
         height: 50px;
         cursor: pointer;
         transition: 0.7s;
+
+        .dark & {
+            background: url(../images/rightGrey.svg);
+
+            &:hover {
+                opacity: 60%;
+            }
+        }
 
         &:hover {
             opacity: 75%;

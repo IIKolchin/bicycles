@@ -1,0 +1,44 @@
+.workout {
+    display: flex;
+    padding: 150px 120px 120px;
+
+    &__title {
+        margin: 0 160px 50px 0;
+        @extend %title-style;
+    }
+
+    &__text {
+        @extend %text-style;
+        margin: 0 160px 182px 0;
+
+        .dark & {
+            color: #e5e5e5;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #151515;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        cursor: pointer;
+        transition: 0.7s;
+
+        .dark & {
+            color: $white;
+
+            &:hover {
+                opacity: 65%;
+            }
+        }
+
+        &:hover {
+            opacity: 75%;
+        }
+
+        &:first-of-type {
+            margin-right: 30px;
+        }
+    }
+}
