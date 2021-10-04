@@ -84,7 +84,30 @@
         top: 30px;
         left: 630px;
     }
+
+    &_mobile {
+        display: none;
+    }
 }
 
 @media (max-width: 400px) {
+    .triathlon {
+        display: block;
+        margin-top: 0;
+        padding-left: 0;
+
+        &__group,
+        &__image {
+            display: none;
+        }
+
+        &_mobile {
+            display: block;
+            padding: 40px 18px;
+        }
+
+        &__title_mobile {
+            @extend %title-mobile;
+        }
+    }
 }

@@ -181,6 +181,9 @@
   top: 30px;
   left: 630px;
 }
+.triathlon_mobile {
+  display: none;
+}
 
 .merks {
   display: flex;
