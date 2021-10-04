@@ -13,17 +13,27 @@
   </head>
   <body class="page">
     <header class="header">
-      <ul class="header__links">
-        <li class="header__link">
-          <a class="header__ref" href="">Покрытия и градиенты</a>
-        </li>
-        <li class="header__link">
-          <a class="header__ref" href="">Велосипеды</a>
-        </li>
-        <li class="header__link">
-          <a class="header__ref" href="">Тренировки</a>
-        </li>
-      </ul>
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li class="header__link">
+            <a class="header__ref" href="">Покрытия и градиенты</a>
+          </li>
+          <li class="header__link">
+            <a class="header__ref" href="">Велосипеды</a>
+          </li>
+          <li class="header__link">
+            <a class="header__ref" href="">Тренировки</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header_mobile">
+        <div class="header__button_mobile">
+          <div class="header__line"></div>
+          <div class="header__line"></div>
+          <div class="header__line"></div>
+        </div>
+      </div>
     </header>
 
     <main class="main-content">
@@ -49,6 +59,34 @@
           </div>
         </div>
         <img class="triathlon__image" src="./images/Firstpic.png" alt="" />
+
+        <div class="triathlon_mobile">
+          <h2 class="triathlon__title triathlon__title_mobile">
+            Шоссе, ТТ и Грэвел
+          </h2>
+          <img
+            class="triathlon__image triathlon__image_mobile"
+            src="./images/Firstpic.png"
+            alt=""
+          />
+          <div class="triathlon__bike-hallway triathlon__bike-hallway_mobile">
+            <img
+              class="triathlon__bike-image triathlon__bike-image_mobile"
+              src="./images/CannondaleSystemsix.png"
+              alt=""
+            />
+          </div>
+
+          <p class="triathlon__text triathlon__text_mobile">
+            Триатлонные старты, горные серпантины или грейвел заезды по
+            живописным маршрутам – нужно только определиться с выбором
+            велосипеда и отправиться в путь.
+          </p>
+
+          <a class="triathlon__button triathlon__button_mobile" href=""
+            >Подробнее</a
+          >
+        </div>
       </section>
       <section class="merks">
         <img class="merks__image" src="./images/Secondpic.png" alt="" />
@@ -290,19 +328,21 @@
 
     <footer class="footer">
       <h3 class="footer__title">Подпишитесь на рассылку —</h3>
-      <form name="edit-form" class="footer__form">
+      <form action="#" name="edit-form" class="footer__form">
         <fieldset class="footer__input-container">
           <input
             type="text"
             class="footer__input"
             placeholder="    Ваш e-mail"
           />
+          <button type="submit" class="footer__input-button">ok</button>
         </fieldset>
       </form>
       <div class="footer__group">
         <p class="footer__copyright">&copy; Road Club 2021</p>
         <div class="footer__switch">
           <div class="footer__icon-sun"></div>
+          ---
           <div class="footer__icon-button"></div>
           <div class="footer__icon-moon"></div>
         </div>

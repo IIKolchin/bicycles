@@ -46,4 +46,44 @@
       opacity: 75%;
     }
   }
+
+  &_mobile {
+    display: none;
+  }
+
+  &__line {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    height: 74px;
+    &__links {
+      display: none;
+    }
+
+    &_mobile {
+      position: relative;
+      display: block;
+      max-width: 400px;
+      min-height: 74px;
+    }
+
+    &__button_mobile {
+      margin: 28px 18px 30px 280px;
+    }
+
+    &__line {
+      display: block;
+      width: 22px;
+      height: 3px;
+      margin-bottom: 5px;
+      background: $black;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
