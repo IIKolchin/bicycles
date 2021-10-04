@@ -27,6 +27,11 @@
   color: #fff;
 }
 
+@media (max-width: 400px) {
+  .page {
+    max-width: 400px;
+  }
+}
 .header {
   min-height: 74px;
   width: 100%;
@@ -69,7 +74,40 @@
 .header__ref:hover {
   opacity: 75%;
 }
+.header_mobile {
+  display: none;
+}
+.header__line {
+  display: none;
+}
 
+@media (max-width: 500px) {
+  .header {
+    height: 74px;
+  }
+  .header__links {
+    display: none;
+  }
+  .header_mobile {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    min-height: 74px;
+  }
+  .header__button_mobile {
+    margin: 28px 18px 30px 280px;
+  }
+  .header__line {
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #151515;
+  }
+  .header__line:last-of-type {
+    margin-bottom: 0;
+  }
+}
 .triathlon {
   display: flex;
   justify-content: space-between;
@@ -401,6 +439,7 @@
   margin-bottom: 100px;
 }
 .footer__input-container {
+  position: relative;
   border: 0;
   margin: 0;
   padding: 0;
@@ -409,9 +448,43 @@
   width: 360px;
   height: 50px;
   border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #222222;
+  opacity: 70%;
   border-color: rgba(199, 199, 199, 0.5);
   background-color: #efefef;
 }
+.footer__input:hover {
+  color: #151515;
+  opacity: 1;
+  cursor: pointer;
+}
 .dark .footer__input {
   background: #2f2f2f;
+  color: #fff;
+  opacity: 70%;
+}
+.dark .footer__input:hover {
+  opacity: 1;
+}
+.footer__input-button {
+  visibility: hidden;
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  top: 16px;
+  left: 330px;
+}
+.footer__input-button-on {
+  visibility: visible;
+}
+.dark .footer__input-button {
+  color: #fff;
 }

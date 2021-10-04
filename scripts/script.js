@@ -34,6 +34,8 @@ const buttonHighway = document.querySelector(".bicycle__button_highway");
 const buttonGrevel = document.querySelector(".bicycle__button_grevel");
 const buttonTt = document.querySelector(".bicycle__button_tt");
 
+buttonHighway.classList.add("bicycle__button-active");
+
 buttonHighway.addEventListener("click", function () {
   buttonHighway.classList.add("bicycle__button-active");
   buttonGrevel.classList.remove("bicycle__button-active");
@@ -56,4 +58,17 @@ const switchButton = document.querySelector(".footer__icon-button");
 
 switchButton.addEventListener("click", function () {
   document.querySelector("html").classList.toggle("dark");
+});
+
+const input = document.querySelector(".footer__input");
+const inputButton = document.querySelector(".footer__input-button");
+
+input.addEventListener("click", function () {
+  inputButton.classList.add("footer__input-button-on");
+  input.removeAttribute("placeholder");
+});
+
+inputButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  input.value = "Круто!";
 });

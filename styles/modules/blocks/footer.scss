@@ -73,6 +73,7 @@
     }
 
     &__input-container {
+        position: relative;
         border: 0;
         margin: 0;
         padding: 0;
@@ -82,11 +83,51 @@
         width: 360px;
         height: 50px;
         border-radius: 4px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 28px;
+        color: #222222;
+        opacity: 70%;
+
         border-color: rgba(199, 199, 199, 0.5);
         background-color: #efefef;
 
+        &:hover {
+            color: $black;
+            opacity: 1;
+            cursor: pointer;
+        }
+
         .dark & {
             background: #2f2f2f;
+            color: $white;
+            opacity: 70%;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__input-button {
+        visibility: hidden;
+        position: absolute;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 28px;
+        top: 16px;
+        left: 330px;
+
+        &-on {
+            visibility: visible;
+        }
+
+        .dark & {
+            color: $white;
         }
     }
 }
