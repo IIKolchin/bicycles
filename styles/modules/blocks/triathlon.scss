@@ -95,6 +95,7 @@
         display: block;
         margin-top: 0;
         padding-left: 0;
+        max-width: 400px;
 
         &__group,
         &__image {
@@ -103,11 +104,50 @@
 
         &_mobile {
             display: block;
+            position: relative;
             padding: 40px 18px;
         }
 
         &__title_mobile {
-            @extend %title-mobile;
+            margin: 0;
+            min-width: 284px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.5px;
+            margin-bottom: 40px;
+        }
+
+        &__image_mobile {
+            width: 254px;
+            height: 358px;
+            margin-left: 30px;
+        }
+
+        &__text_mobile {
+            font-size: 12px;
+            line-height: 18px;
+            color: #222222;
+            opacity: 70%;
+        }
+
+        &__bike-hallway_mobile {
+            position: absolute;
+            top: 240px;
+            left: 18px;
+            width: 234px;
+            height: 200px;
+        }
+
+        &__bike-image_mobile {
+            border-radius: 20px;
+            position: sticky;
+            width: 234px;
+            height: 160px;
+        }
+
+        &-mobile-indent {
+            margin-top: 566px;
         }
     }
 }

@@ -72,3 +72,23 @@ inputButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   input.value = "Круто!";
 });
+
+const mobileHeaderButton = document.querySelector(".header__button_mobile");
+
+mobileHeaderButton.addEventListener("click", function () {
+  document.querySelector(".header_mobile").classList.add("header_mobile-off");
+  document.querySelector(".header_menu").classList.add("header_menu-on");
+  document.querySelector(".triathlon").classList.add("triathlon-mobile-indent");
+});
+
+const closeMenu = document.querySelector(".header__close");
+
+closeMenu.addEventListener("click", function () {
+  document.querySelector(".header_menu").classList.remove("header_menu-on");
+  document
+    .querySelector(".header_mobile")
+    .classList.remove("header_mobile-off");
+  document
+    .querySelector(".triathlon")
+    .classList.remove("triathlon-mobile-indent");
+});
