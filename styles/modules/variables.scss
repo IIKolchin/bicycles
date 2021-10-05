@@ -26,3 +26,10 @@ $white: #fff;
     line-height: 40px;
     letter-spacing: -0.5px;
 }
+
+%text-mobile {
+    font-size: 12px;
+    line-height: 18px;
+    color: #222222;
+    opacity: 70%;
+}
