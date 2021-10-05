@@ -1,3 +1,25 @@
 .bicycles {
     margin: 0 120px;
+
+    &__slider {
+        display: block;
+    }
+
+    &__slider-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .bicycles {
+        margin: 0 18px;
+
+        &__slider {
+            display: none;
+
+            &-mobile {
+                display: block;
+            }
+        }
+    }
 }

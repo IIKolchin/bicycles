@@ -1,3 +1,7 @@
+const buttonHighway = document.querySelector(".bicycle__button-highway");
+const buttonGrevel = document.querySelector(".bicycle__button-grevel");
+const buttonTt = document.querySelector(".bicycle__button-tt");
+
 new Swiper(".slider__container", {
   navigation: {
     nextEl: ".slider__button-next",
@@ -7,32 +11,45 @@ new Swiper(".slider__container", {
   loop: true,
 });
 
+new Swiper(".slider__container_mobile", {
+  navigation: {
+    nextEl: ".slider__button-next_mobile",
+    prevEl: ".slider__button-prev_mobile",
+  },
+
+  loop: true,
+});
+
 const swiper = new Swiper(".bicycles__slider");
 
-document
-  .querySelector(".bicycle__button_highway")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    swiper.slideTo(0, 0);
-  });
+buttonHighway.addEventListener("click", function (e) {
+  e.preventDefault();
+  swiper.slideTo(0, 0);
+});
 
-document
-  .querySelector(".bicycle__button_grevel")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    swiper.slideTo(1, 0);
-  });
+buttonGrevel.addEventListener("click", function (e) {
+  e.preventDefault();
+  swiper.slideTo(1, 0);
+});
 
-document
-  .querySelector(".bicycle__button_tt")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    swiper.slideTo(2, 0);
-  });
+buttonTt.addEventListener("click", function (e) {
+  e.preventDefault();
+  swiper.slideTo(2, 0);
+});
 
-const buttonHighway = document.querySelector(".bicycle__button_highway");
-const buttonGrevel = document.querySelector(".bicycle__button_grevel");
-const buttonTt = document.querySelector(".bicycle__button_tt");
+const swiperBicycleMobile = new Swiper(".bicycles__slider-mobile");
+
+const select = document.querySelector(".bicycle__buttons-mobile");
+
+select.addEventListener("change", function () {
+  if (this.value == "highway") {
+    swiperBicycleMobile.slideTo(0, 0);
+  } else if (this.value == "grevel") {
+    swiperBicycleMobile.slideTo(1, 0);
+  } else if (this.value == "tt") {
+    swiperBicycleMobile.slideTo(2, 0);
+  }
+});
 
 buttonHighway.classList.add("bicycle__button-active");
 
@@ -91,4 +108,25 @@ closeMenu.addEventListener("click", function () {
   document
     .querySelector(".triathlon")
     .classList.remove("triathlon-mobile-indent");
+});
+
+const swiperInHighway = new Swiper(".slider-highway", {
+  pagination: {
+    el: ".slider__pagination-highway",
+    clickable: true,
+  },
+});
+
+const swiperInGrevel = new Swiper(".slider-grevel", {
+  pagination: {
+    el: ".slider__pagination-grevel",
+    clickable: true,
+  },
+});
+
+const swiperInTt = new Swiper(".slider-tt", {
+  pagination: {
+    el: ".slider__pagination-tt",
+    clickable: true,
+  },
 });

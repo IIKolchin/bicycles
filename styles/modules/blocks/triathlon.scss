@@ -1,7 +1,7 @@
 .triathlon {
     display: flex;
     justify-content: space-between;
-    min-height: 856px;
+    // min-height: 856px;
     padding-left: 120px;
     margin-top: 74px;
 
@@ -9,6 +9,12 @@
         margin-top: 80px;
         max-width: 460px;
         @extend %title-style;
+    }
+
+    &__title_mobile {
+        margin: 0 0 40px;
+        min-width: 284px;
+        @extend %title-mobile;
     }
 
     &__text {
@@ -19,6 +25,11 @@
         .dark & {
             color: #e5e5e5;
         }
+    }
+
+    &__text_mobile {
+        @extend %text-mobile;
+        margin: 40px 0;
     }
 
     &__button {
@@ -42,9 +53,19 @@
         }
     }
 
+    &__button_mobile {
+        width: 284px;
+    }
+
     &__image {
         margin-top: 20px;
         height: 836px;
+    }
+
+    &__image_mobile {
+        width: 254px;
+        height: 358px;
+        margin-left: 30px;
     }
 
     &__bike {
@@ -78,11 +99,26 @@
         height: 430px;
     }
 
+    &__bike-hallway_mobile {
+        position: absolute;
+        top: 240px;
+        left: 18px;
+        width: 234px;
+        height: 200px;
+    }
+
     &__bike-image {
         border-radius: 20px;
         position: sticky;
         top: 30px;
         left: 630px;
+    }
+
+    &__bike-image_mobile {
+        border-radius: 20px;
+        position: sticky;
+        width: 234px;
+        height: 160px;
     }
 
     &_mobile {
@@ -106,44 +142,6 @@
             display: block;
             position: relative;
             padding: 40px 18px;
-        }
-
-        &__title_mobile {
-            margin: 0;
-            min-width: 284px;
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 40px;
-            letter-spacing: -0.5px;
-            margin-bottom: 40px;
-        }
-
-        &__image_mobile {
-            width: 254px;
-            height: 358px;
-            margin-left: 30px;
-        }
-
-        &__text_mobile {
-            font-size: 12px;
-            line-height: 18px;
-            color: #222222;
-            opacity: 70%;
-        }
-
-        &__bike-hallway_mobile {
-            position: absolute;
-            top: 240px;
-            left: 18px;
-            width: 234px;
-            height: 200px;
-        }
-
-        &__bike-image_mobile {
-            border-radius: 20px;
-            position: sticky;
-            width: 234px;
-            height: 160px;
         }
 
         &-mobile-indent {
