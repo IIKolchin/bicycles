@@ -88,9 +88,13 @@
         }
 
         &-mobile {
-            margin: 0 72px 34px;
+            margin: 0 72px 36px;
             font-size: 14px;
             line-height: 18px;
+
+            .dark & {
+                color: $white;
+            }
         }
     }
 
@@ -111,6 +115,10 @@
 
         &-mobile {
             display: block;
+        }
+
+        .dark &__button_mobile {
+            color: black;
         }
     }
 }

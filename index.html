@@ -438,20 +438,22 @@
 
         <!-- Мобильная версия велосипеды -->
 
+        <div class="merks__line-mobile"></div>
+
         <div class="bicycle-mobile">
           <h2 class="bicycle__title-mobile triathlon__title_mobile">
             Велосипеды
           </h2>
           <select class="bicycle__buttons-mobile">
             
-              <option class="bicycle__button bicycle__button-highway-mobile" value="highway">
+              <option class="bicycle__button bicycle__button_mobile bicycle__button-highway-mobile" value="highway">
             
                 Шоссе
               </option>
-              <option class="bicycle__button bicycle__button-grevel-mobile" value="grevel">
+              <option class="bicycle__button bicycle__button_mobile bicycle__button-grevel-mobile" value="grevel">
                 Грэвел
               </option>
-              <option class="bicycle__button bicycle__button-tt-mobile" value="tt">
+              <option class="bicycle__button bicycle__button_mobile bicycle__button-tt-mobile" value="tt">
                 TT
               </option>
             </p>
@@ -530,7 +532,7 @@
               </div>
             </div>
             </div>
-            <div class="swiper-pagination slider__pagination-highway"></div>
+            <div class="swiper-pagination slider__pagination slider__pagination-highway"></div>
               </div>
             </div>
 
@@ -614,7 +616,7 @@
 
   </div>
   </div>
-  <div class="swiper-pagination slider__pagination-grevel"></div>
+  <div class="swiper-pagination slider__pagination slider__pagination-grevel"></div>
             </div>
 
             <div class="swiper-slide bicycle__pic-mobile">
@@ -691,7 +693,7 @@
             </div>
           </div>
 
-          <div class="swiper-pagination slider__pagination-tt"></div>
+          <div class="swiper-pagination slider__pagination slider__pagination-tt"></div>
         </div>
           </div>
         </div>
@@ -709,7 +711,31 @@
             <a class="workout__link" href="https://www.strava.com">Komoot</a>
           </div>
         </div>
-        <img src="./images/Training.png" alt="" />
+        <img class="workout__image" src="./images/Training.png" alt="" />
+
+
+        <div class="workout__line-mobile merks__line-mobile"></div>
+          <h2 class="workout__title workout__title_mobile triathlon__title_mobile">Тренировки</h2>
+
+          <img class="workout__image workout__image_mobile" src="./images/Training.png" alt="" />
+          <p class="workout__text workout__text_mobile triathlon__text_mobile">
+            Чтобы найти маршрут для тренировки можно воспользоваться сервисом
+            Komoot, а записать эти тренировки поможет приложение Strava, а также
+            это приложение позволит построить тренировочный план.
+          </p>
+          <div class="workout__links workout__links_mobile">
+            <a class="workout__link workout__link_mobile" href="https://www.komoot.com">Strava</a>
+            <a class="workout__link workout__link_mobile" href="https://www.strava.com">Komoot</a>
+          </div>
+        </div>
+        
+
+
+
+
+
+
+
       </section>
     </main>
 
@@ -733,6 +759,13 @@
           <div class="footer__icon-moon"></div>
         </div>
       </div>
+
+      <div class="footer__group footer__group_mobile">
+        <p class="footer__copyright">&copy; Road Club 2021</p>
+       <img src="./images/logoFoterBlack.svg" alt="" class="footer__logo">
+      </div>
+
+
     </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="scripts/script.js"></script>

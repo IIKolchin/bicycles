@@ -471,6 +471,12 @@
   margin-left: 18px;
   margin-bottom: 40px;
 }
+.slider__pagination .swiper-pagination-bullet {
+  background-color: #151515;
+}
+.dark .slider__pagination .swiper-pagination-bullet {
+  background-color: #fff;
+}
 
 @media (max-width: 320px) {
   .slider__container {
@@ -552,9 +558,12 @@
   color: #fff;
 }
 .bicycle__name-mobile {
-  margin: 0 72px 34px;
+  margin: 0 72px 36px;
   font-size: 14px;
   line-height: 18px;
+}
+.dark .bicycle__name-mobile {
+  color: #fff;
 }
 .bicycle__link {
   text-decoration: none;
@@ -571,6 +580,9 @@
   }
   .bicycle-mobile {
     display: block;
+  }
+  .dark .bicycle__button_mobile {
+    color: black;
   }
 }
 .bicycles {
@@ -601,11 +613,19 @@
 .workout__title {
   margin: 0 160px 50px 0;
 }
+.workout__title_mobile {
+  display: none;
+  margin: 40px 0;
+}
 .workout__text {
   margin: 0 160px 182px 0;
 }
 .dark .workout__text {
   color: #e5e5e5;
+}
+.workout__text_mobile {
+  display: none;
+  margin: 40px 0;
 }
 .workout__link {
   text-decoration: none;
@@ -628,7 +648,44 @@
 .workout__link:first-of-type {
   margin-right: 30px;
 }
+.workout__link_mobile {
+  display: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+.workout__image_mobile {
+  display: none;
+  width: 284px;
+  height: 225px;
+}
 
+@media (max-width: 320px) {
+  .workout {
+    display: block;
+    padding: 40px 18px;
+  }
+  .workout__group {
+    display: none;
+  }
+  .workout__image {
+    display: none;
+  }
+  .workout__title_mobile {
+    display: block;
+  }
+  .workout__image_mobile {
+    display: block;
+  }
+  .workout__text_mobile {
+    display: block;
+  }
+  .workout__links_mobile {
+    display: flex;
+  }
+  .workout__link_mobile {
+    display: block;
+  }
+}
 .footer {
   padding: 80px 120px 60px;
   background: #efefef;
@@ -646,6 +703,9 @@
 .footer__group {
   display: flex;
   justify-content: space-between;
+}
+.footer__group_mobile {
+  display: none;
 }
 .footer__switch {
   display: flex;
@@ -739,4 +799,37 @@
 }
 .dark .footer__input-button {
   color: #fff;
+}
+
+@media (max-width: 320px) {
+  .footer {
+    padding: 60px 18px 0;
+  }
+  .footer__group {
+    display: none;
+  }
+  .footer__group_mobile {
+    display: flex;
+  }
+  .footer__title {
+    margin-bottom: 40px;
+  }
+  .footer__input-container {
+    width: 284px;
+  }
+  .footer__input {
+    width: 284px;
+  }
+  .footer__input-button {
+    left: 255px;
+  }
+  .footer__copyright {
+    margin-bottom: 20px;
+  }
+  .footer__logo {
+    margin-bottom: 20px;
+  }
+  .dark .footer__logo {
+    background: url(../images/logoFooterWhite.svg);
+  }
 }

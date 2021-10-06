@@ -17,6 +17,10 @@
     &__group {
         display: flex;
         justify-content: space-between;
+
+        &_mobile {
+            display: none;
+        }
     }
 
     &__switch {
@@ -128,6 +132,48 @@
 
         .dark & {
             color: $white;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .footer {
+        padding: 60px 18px 0;
+
+        &__group {
+            display: none;
+
+            &_mobile {
+                display: flex;
+            }
+        }
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__input-container {
+            width: 284px;
+        }
+
+        &__input {
+            width: 284px;
+        }
+
+        &__input-button {
+            left: 255px;
+        }
+
+        &__copyright {
+            margin-bottom: 20px;
+        }
+
+        &__logo {
+            margin-bottom: 20px;
+
+            .dark & {
+                background: url(../images/logoFooterWhite.svg);
+            }
         }
     }
 }

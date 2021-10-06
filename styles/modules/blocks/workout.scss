@@ -5,6 +5,11 @@
     &__title {
         margin: 0 160px 50px 0;
         @extend %title-style;
+
+        &_mobile {
+            display: none;
+            margin: 40px 0;
+        }
     }
 
     &__text {
@@ -13,6 +18,11 @@
 
         .dark & {
             color: #e5e5e5;
+        }
+
+        &_mobile {
+            display: none;
+            margin: 40px 0;
         }
     }
 
@@ -39,6 +49,55 @@
 
         &:first-of-type {
             margin-right: 30px;
+        }
+
+        &_mobile {
+            display: none;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__image {
+        &_mobile {
+            display: none;
+            width: 284px;
+            height: 225px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .workout {
+        display: block;
+        padding: 40px 18px;
+
+        &__group {
+            display: none;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__title_mobile {
+            display: block;
+        }
+
+        &__image_mobile {
+            display: block;
+        }
+
+        &__text_mobile {
+            display: block;
+        }
+
+        &__links_mobile {
+            display: flex;
+        }
+
+        &__link_mobile {
+            display: block;
         }
     }
 }
