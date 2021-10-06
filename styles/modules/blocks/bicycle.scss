@@ -58,7 +58,6 @@
     &__pic {
         margin: 0;
         display: flex;
-        flex-wrap: wrap;
     }
 
     &__image {
@@ -117,6 +116,17 @@
 
     &__line {
         margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .bicycle {
+        &__group {
+            max-width: 80%;
+        }
+        &__image {
+            max-width: 80%;
+        }
     }
 }
 
