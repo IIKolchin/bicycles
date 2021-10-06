@@ -11,7 +11,7 @@
     }
 
     &__button {
-        margin: 92px 40px 140px 0;
+        margin: 92px 40px 120px 0;
         cursor: pointer;
         @extend %text-style;
         transition: 0.5s;
@@ -45,32 +45,38 @@
     }
 
     &__title {
-        margin: 60px 513px 120px 0;
+        padding: 0;
+        height: 60px;
+        margin: 60px 0 120px 0;
         @extend %title-style;
 
         &-mobile {
-            margin: 40px 0;
+            margin: 0 0 40px;
         }
     }
 
     &__pic {
         margin: 0;
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__image {
         border-radius: 20px;
+        // width: 31.66%;
+        min-width: 40%;
 
         &-mobile {
-            width: 254px;
-            height: 254px;
+            width: 89.4%;
+            // height: 254px;
             margin: 35px 15px 3px;
         }
     }
 
     &__group {
         margin: 0 30px 0 0;
-        width: 380px;
+        // width: 380px;
+        width: 31.66%;
 
         &:last-of-type {
             margin-right: 0;
@@ -88,6 +94,7 @@
         }
 
         &-mobile {
+            text-align: center;
             margin: 0 72px 36px;
             font-size: 14px;
             line-height: 18px;
@@ -107,9 +114,13 @@
             color: $black;
         }
     }
+
+    &__line {
+        margin-bottom: 40px;
+    }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 600px) {
     .bicycle {
         display: none;
 
@@ -119,6 +130,17 @@
 
         .dark &__button_mobile {
             color: black;
+        }
+
+        &__buttons-mobile {
+            width: 114px;
+            height: 30px;
+            background: $background;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 14px;
+            border-radius: 2px;
+            border-color: #e3e3e3;
         }
     }
 }

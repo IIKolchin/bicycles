@@ -71,9 +71,15 @@ buttonTt.addEventListener("click", function () {
   buttonGrevel.classList.remove("bicycle__button-active");
 });
 
-const switchButton = document.querySelector(".footer__icon-button");
+const switchButtonFooter = document.querySelector(".footer__switch-button");
 
-switchButton.addEventListener("click", function () {
+switchButtonFooter.addEventListener("click", function () {
+  document.querySelector("html").classList.toggle("dark");
+});
+
+const switchButtonHeader = document.querySelector(".header__switch-button");
+
+switchButtonHeader.addEventListener("click", function () {
   document.querySelector("html").classList.toggle("dark");
 });
 
@@ -95,7 +101,6 @@ const mobileHeaderButton = document.querySelector(".header__button_mobile");
 mobileHeaderButton.addEventListener("click", function () {
   document.querySelector(".header_mobile").classList.add("header_mobile-off");
   document.querySelector(".header_menu").classList.add("header_menu-on");
-  document.querySelector(".triathlon").classList.add("triathlon-mobile-indent");
 });
 
 const closeMenu = document.querySelector(".header__close");
@@ -105,9 +110,6 @@ closeMenu.addEventListener("click", function () {
   document
     .querySelector(".header_mobile")
     .classList.remove("header_mobile-off");
-  document
-    .querySelector(".triathlon")
-    .classList.remove("triathlon-mobile-indent");
 });
 
 const swiperInHighway = new Swiper(".slider-highway", {

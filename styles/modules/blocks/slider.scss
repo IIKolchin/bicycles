@@ -35,18 +35,21 @@
     }
 
     &__image {
+        vertical-align: top;
         margin: 0 40px 50px 0;
+        width: 49.2%;
 
         &_mobile {
-            width: 284px;
-            height: 175px;
+            vertical-align: top;
+            width: 88.75%;
+
             margin: 0 18px 40px;
         }
     }
 
     &__buttons {
         display: flex;
-        margin-left: 120px;
+        margin: 0 0 60px 120px;
 
         &_mobile {
             position: absolute;
@@ -127,7 +130,7 @@
 
     &__line {
         width: 88.75%;
-        margin-left: 18px;
+        margin-left: 5.62%;
         margin-bottom: 40px;
     }
 
@@ -140,8 +143,23 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 1000px) {
     .slider {
+        &__pic {
+            width: 150%;
+        }
+        &__image {
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .slider {
+        padding-top: 40px;
+
         &__container {
             display: none;
         }
