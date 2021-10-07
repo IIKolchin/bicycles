@@ -121,6 +121,9 @@
 
 @media (max-width: 1380px) {
     .bicycle {
+        &__title {
+            font-size: 46px;
+        }
         &__group {
             max-width: 80%;
         }
@@ -139,7 +142,7 @@
         }
 
         .dark &__button_mobile {
-            color: black;
+            color: $white;
         }
 
         &__buttons-mobile {
@@ -151,6 +154,11 @@
             line-height: 14px;
             border-radius: 2px;
             border-color: #e3e3e3;
+
+            .dark & {
+                background: #333333;
+                color: $white;
+            }
         }
     }
 }

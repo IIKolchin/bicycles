@@ -27,6 +27,7 @@
         }
 
         &_mobile {
+            display: none;
             @extend %text-mobile;
             margin: 40px 0;
         }
@@ -102,11 +103,7 @@
         height: 430px;
 
         &_mobile {
-            position: absolute;
-            top: 240px;
-            left: 18px;
-            width: 234px;
-            height: 200px;
+            display: none;
         }
     }
 
@@ -131,7 +128,8 @@
 @media (max-width: 1100px) {
     .triathlon {
         &__bike-hallway {
-            left: 300px;
+            top: -250px;
+            left: 350px;
             width: 300px;
         }
         &__bike-image {
@@ -144,16 +142,61 @@
         }
 
         &__text {
-            max-width: 340px;
+            width: 340px;
             font-size: 16px;
+        }
+
+        &__bike-line {
+            margin-right: 0;
+        }
+
+        &__image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__bike {
+            margin-top: 50px;
         }
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .triathlon {
-        display: block;
-        margin-top: 0;
+        padding-left: 5%;
+        &__bike-hallway {
+            width: 250px;
+        }
+        &__bike-image {
+            width: 250px;
+        }
+
+        &__title {
+            max-width: 240px;
+            font-size: 38px;
+        }
+
+        &__text {
+            width: 80%;
+            font-size: 16px;
+        }
+
+        &__image {
+            width: 400px;
+            height: 548px;
+        }
+
+        &__bike-line {
+            margin-right: 10px;
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .triathlon {
+        margin-top: 74px;
         padding-left: 0;
 
         &__group,
@@ -161,10 +204,48 @@
             display: none;
         }
 
+        &__title {
+            margin-left: 30px;
+        }
+
         &_mobile {
             display: block;
             position: relative;
             padding: 40px 5.62%;
+        }
+
+        &__bike-hallway {
+            display: none;
+
+            &_mobile {
+                display: block;
+                position: absolute;
+                top: 240px;
+                left: 18px;
+                width: 234px;
+                height: 200px;
+            }
+        }
+
+        &__text {
+            width: 100%;
+
+            &_mobile {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .triathlon {
+        &__text {
+            font-size: 12px;
+        }
+
+        &__title {
+            margin-left: 0;
+            font-size: 32px;
         }
     }
 }

@@ -47,7 +47,24 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+    .merks {
+        &__image {
+            width: 50%;
+        }
+
+        &__title {
+            margin-right: 30px;
+            font-size: 22px;
+        }
+
+        &__name {
+            margin-top: 100px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
     .merks {
         display: block;
         padding: 40px 5.62%;

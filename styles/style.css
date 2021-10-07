@@ -123,7 +123,6 @@
 }
 .header_mobile {
   display: none;
-  max-width: 100%;
 }
 .header_menu {
   display: none;
@@ -150,15 +149,15 @@
   margin: 316px 28.75% 38px;
 }
 
-@media (max-width: 600px) {
-  .header {
-    position: relative;
-  }
+@media (max-width: 700px) {
   .header__links {
     display: none;
   }
   .header_mobile {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
     display: block;
   }
   .header__links_mobile {
@@ -166,6 +165,9 @@
   }
   .header_mobile-off {
     display: none;
+  }
+  .header_menu {
+    position: relative;
   }
 }
 .triathlon {
@@ -190,6 +192,7 @@
   color: #e5e5e5;
 }
 .triathlon__text_mobile {
+  display: none;
   margin: 40px 0;
 }
 .triathlon__button {
@@ -251,11 +254,7 @@
   height: 430px;
 }
 .triathlon__bike-hallway_mobile {
-  position: absolute;
-  top: 240px;
-  left: 18px;
-  width: 234px;
-  height: 200px;
+  display: none;
 }
 .triathlon__bike-image {
   border-radius: 20px;
@@ -274,7 +273,8 @@
 
 @media (max-width: 1100px) {
   .triathlon__bike-hallway {
-    left: 300px;
+    top: -250px;
+    left: 350px;
     width: 300px;
   }
   .triathlon__bike-image {
@@ -285,23 +285,89 @@
     font-size: 46px;
   }
   .triathlon__text {
-    max-width: 340px;
+    width: 340px;
     font-size: 16px;
   }
-}
-@media (max-width: 600px) {
-  .triathlon {
+  .triathlon__bike-line {
+    margin-right: 0;
+  }
+  .triathlon__image {
     display: block;
-    margin-top: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .triathlon__bike {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 900px) {
+  .triathlon {
+    padding-left: 5%;
+  }
+  .triathlon__bike-hallway {
+    width: 250px;
+  }
+  .triathlon__bike-image {
+    width: 250px;
+  }
+  .triathlon__title {
+    max-width: 240px;
+    font-size: 38px;
+  }
+  .triathlon__text {
+    width: 80%;
+    font-size: 16px;
+  }
+  .triathlon__image {
+    width: 400px;
+    height: 548px;
+  }
+  .triathlon__bike-line {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .triathlon {
+    margin-top: 74px;
     padding-left: 0;
   }
   .triathlon__group, .triathlon__image {
     display: none;
   }
+  .triathlon__title {
+    margin-left: 30px;
+  }
   .triathlon_mobile {
     display: block;
     position: relative;
     padding: 40px 5.62%;
+  }
+  .triathlon__bike-hallway {
+    display: none;
+  }
+  .triathlon__bike-hallway_mobile {
+    display: block;
+    position: absolute;
+    top: 240px;
+    left: 18px;
+    width: 234px;
+    height: 200px;
+  }
+  .triathlon__text {
+    width: 100%;
+  }
+  .triathlon__text_mobile {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .triathlon__text {
+    font-size: 12px;
+  }
+  .triathlon__title {
+    margin-left: 0;
+    font-size: 32px;
   }
 }
 .merks {
@@ -346,7 +412,19 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+  .merks__image {
+    width: 50%;
+  }
+  .merks__title {
+    margin-right: 30px;
+    font-size: 22px;
+  }
+  .merks__name {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 700px) {
   .merks {
     display: block;
     padding: 40px 5.62%;
@@ -387,15 +465,9 @@
 .slider__title {
   margin: 60px 0 50px 120px;
 }
-.slider__title_mobile {
-  margin: 0 0 40px 18px;
-}
 .slider__text {
   margin: 0 0 80px 120px;
   max-width: 460px;
-}
-.slider__text_mobile {
-  margin: 0 18px 40px;
 }
 .dark .slider__text {
   color: #e5e5e5;
@@ -501,6 +573,9 @@
   .slider__image:last-of-type {
     display: none;
   }
+  .slider__title, .slider__text, .slider__pic {
+    margin-left: 60px;
+  }
 }
 @media (max-width: 600px) {
   .slider {
@@ -512,6 +587,12 @@
   .slider__container_mobile {
     display: block;
     position: relative;
+  }
+  .slider__title_mobile {
+    margin: 0 0 40px 18px;
+  }
+  .slider__text_mobile {
+    margin: 0 18px 40px;
   }
 }
 .bicycle {
@@ -608,6 +689,9 @@
 }
 
 @media (max-width: 1380px) {
+  .bicycle__title {
+    font-size: 46px;
+  }
   .bicycle__group {
     max-width: 80%;
   }
@@ -623,7 +707,7 @@
     display: block;
   }
   .dark .bicycle__button_mobile {
-    color: black;
+    color: #fff;
   }
   .bicycle__buttons-mobile {
     width: 114px;
@@ -634,6 +718,10 @@
     line-height: 14px;
     border-radius: 2px;
     border-color: #e3e3e3;
+  }
+  .dark .bicycle__buttons-mobile {
+    background: #333333;
+    color: #fff;
   }
 }
 .bicycles {
@@ -713,7 +801,25 @@
   width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
+  .workout {
+    padding: 120px 80px 100px;
+  }
+}
+@media (max-width: 1100px) {
+  .workout {
+    padding: 100px 60px 80px;
+  }
+  .workout__text {
+    margin-bottom: 50px;
+    margin-right: 5%;
+    font-size: 16px;
+  }
+  .workout__title {
+    font-size: 46px;
+  }
+}
+@media (max-width: 800px) {
   .workout {
     display: block;
     padding: 40px 5.62% 60px;
@@ -732,12 +838,23 @@
   }
   .workout__text_mobile {
     display: block;
+    font-size: 18px;
+    line-height: 28px;
   }
   .workout__links_mobile {
     display: flex;
   }
   .workout__link_mobile {
     display: block;
+  }
+}
+@media (max-width: 600px) {
+  .workout__text_mobile {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .workout__title {
+    font-size: 32px;
   }
 }
 .footer {
