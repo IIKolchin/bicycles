@@ -1,6 +1,16 @@
 const buttonHighway = document.querySelector(".bicycle__button-highway");
 const buttonGrevel = document.querySelector(".bicycle__button-grevel");
 const buttonTt = document.querySelector(".bicycle__button-tt");
+const switchButtonFooter = document.querySelector(".footer__switch-button");
+const select = document.querySelector(".bicycle__buttons-mobile");
+const switchButtonHeader = document.querySelector(".header__switch-button");
+const input = document.querySelector(".footer__input");
+const inputButton = document.querySelector(".footer__input-button");
+const closeMenuButton = document.querySelector(".header__close");
+const mobileHeaderButton = document.querySelector(".header__button_mobile");
+
+const swiper = new Swiper(".bicycles__slider");
+const swiperBicycleMobile = new Swiper(".bicycles__slider-mobile");
 
 new Swiper(".slider__container", {
   navigation: {
@@ -20,7 +30,70 @@ new Swiper(".slider__container_mobile", {
   loop: true,
 });
 
-const swiper = new Swiper(".bicycles__slider");
+const swiperInHighway = new Swiper(".slider-highway", {
+  pagination: {
+    el: ".slider__pagination-highway",
+    clickable: true,
+  },
+});
+
+const swiperInGrevel = new Swiper(".slider-grevel", {
+  pagination: {
+    el: ".slider__pagination-grevel",
+    clickable: true,
+  },
+});
+
+const swiperInTt = new Swiper(".slider-tt", {
+  pagination: {
+    el: ".slider__pagination-tt",
+    clickable: true,
+  },
+});
+
+function closeMenu() {
+  document.querySelector(".header_menu").classList.remove("header_menu-on");
+  document
+    .querySelector(".header_mobile")
+    .classList.remove("header_mobile-off");
+}
+
+function openMenu() {
+  document.querySelector(".header_mobile").classList.add("header_mobile-off");
+  document.querySelector(".header_menu").classList.add("header_menu-on");
+}
+
+function dark() {
+  try {
+    if (localStorage.getItem("theme") === "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  } catch (err) {}
+}
+
+dark();
+
+switchButtonFooter.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (localStorage.getItem("theme") === "dark") {
+    localStorage.removeItem("theme");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+  dark();
+});
+
+switchButtonHeader.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (localStorage.getItem("theme") === "dark") {
+    localStorage.removeItem("theme");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+  dark();
+});
 
 buttonHighway.addEventListener("click", function (e) {
   e.preventDefault();
@@ -36,10 +109,6 @@ buttonTt.addEventListener("click", function (e) {
   e.preventDefault();
   swiper.slideTo(2, 0);
 });
-
-const swiperBicycleMobile = new Swiper(".bicycles__slider-mobile");
-
-const select = document.querySelector(".bicycle__buttons-mobile");
 
 select.addEventListener("change", function () {
   if (this.value == "highway") {
@@ -71,21 +140,6 @@ buttonTt.addEventListener("click", function () {
   buttonGrevel.classList.remove("bicycle__button-active");
 });
 
-const switchButtonFooter = document.querySelector(".footer__switch-button");
-
-switchButtonFooter.addEventListener("click", function () {
-  document.querySelector("html").classList.toggle("dark");
-});
-
-const switchButtonHeader = document.querySelector(".header__switch-button");
-
-switchButtonHeader.addEventListener("click", function () {
-  document.querySelector("html").classList.toggle("dark");
-});
-
-const input = document.querySelector(".footer__input");
-const inputButton = document.querySelector(".footer__input-button");
-
 input.addEventListener("click", function () {
   inputButton.classList.add("footer__input-button-on");
   input.removeAttribute("placeholder");
@@ -96,25 +150,9 @@ inputButton.addEventListener("click", function (evt) {
   input.value = "Круто!";
 });
 
-function closeMenu() {
-  document.querySelector(".header_menu").classList.remove("header_menu-on");
-  document
-    .querySelector(".header_mobile")
-    .classList.remove("header_mobile-off");
-}
-
-function openMenu() {
-  document.querySelector(".header_mobile").classList.add("header_mobile-off");
-  document.querySelector(".header_menu").classList.add("header_menu-on");
-}
-
-const mobileHeaderButton = document.querySelector(".header__button_mobile");
-
 mobileHeaderButton.addEventListener("click", function () {
   openMenu();
 });
-
-const closeMenuButton = document.querySelector(".header__close");
 
 closeMenuButton.addEventListener("click", function () {
   closeMenu();
@@ -137,24 +175,3 @@ document
   .addEventListener("click", function () {
     closeMenu();
   });
-
-const swiperInHighway = new Swiper(".slider-highway", {
-  pagination: {
-    el: ".slider__pagination-highway",
-    clickable: true,
-  },
-});
-
-const swiperInGrevel = new Swiper(".slider-grevel", {
-  pagination: {
-    el: ".slider__pagination-grevel",
-    clickable: true,
-  },
-});
-
-const swiperInTt = new Swiper(".slider-tt", {
-  pagination: {
-    el: ".slider__pagination-tt",
-    clickable: true,
-  },
-});
