@@ -75,7 +75,7 @@ function dark() {
 
 dark();
 
-switchButtonFooter.addEventListener("click", function (e) {
+function darkSwitch(e) {
   e.preventDefault();
   if (localStorage.getItem("theme") === "dark") {
     localStorage.removeItem("theme");
@@ -83,16 +83,14 @@ switchButtonFooter.addEventListener("click", function (e) {
     localStorage.setItem("theme", "dark");
   }
   dark();
+}
+
+switchButtonFooter.addEventListener("click", function (e) {
+  darkSwitch(e);
 });
 
 switchButtonHeader.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (localStorage.getItem("theme") === "dark") {
-    localStorage.removeItem("theme");
-  } else {
-    localStorage.setItem("theme", "dark");
-  }
-  dark();
+  darkSwitch(e);
 });
 
 buttonHighway.addEventListener("click", function (e) {
