@@ -96,21 +96,47 @@ inputButton.addEventListener("click", function (evt) {
   input.value = "Круто!";
 });
 
-const mobileHeaderButton = document.querySelector(".header__button_mobile");
-
-mobileHeaderButton.addEventListener("click", function () {
-  document.querySelector(".header_mobile").classList.add("header_mobile-off");
-  document.querySelector(".header_menu").classList.add("header_menu-on");
-});
-
-const closeMenu = document.querySelector(".header__close");
-
-closeMenu.addEventListener("click", function () {
+function closeMenu() {
   document.querySelector(".header_menu").classList.remove("header_menu-on");
   document
     .querySelector(".header_mobile")
     .classList.remove("header_mobile-off");
+}
+
+function openMenu() {
+  document.querySelector(".header_mobile").classList.add("header_mobile-off");
+  document.querySelector(".header_menu").classList.add("header_menu-on");
+}
+
+const mobileHeaderButton = document.querySelector(".header__button_mobile");
+
+mobileHeaderButton.addEventListener("click", function () {
+  openMenu();
 });
+
+const closeMenuButton = document.querySelector(".header__close");
+
+closeMenuButton.addEventListener("click", function () {
+  closeMenu();
+});
+
+document
+  .querySelector(".header__ref_mobile-slider")
+  .addEventListener("click", function () {
+    closeMenu();
+  });
+
+document
+  .querySelector(".header__ref_mobile-bicycle")
+  .addEventListener("click", function () {
+    closeMenu();
+  });
+
+document
+  .querySelector(".header__ref_mobile-workout")
+  .addEventListener("click", function () {
+    closeMenu();
+  });
 
 const swiperInHighway = new Swiper(".slider-highway", {
   pagination: {

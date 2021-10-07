@@ -8,20 +8,12 @@
     &__title {
         margin: 60px 0 50px 120px;
         @extend %title-style;
-
-        &_mobile {
-            margin: 0 0 40px 18px;
-        }
     }
 
     &__text {
         margin: 0 0 80px 120px;
         max-width: 460px;
         @extend %text-style;
-
-        &_mobile {
-            margin: 0 18px 40px;
-        }
 
         .dark & {
             color: #e5e5e5;
@@ -153,6 +145,12 @@
                 display: none;
             }
         }
+
+        &__title,
+        &__text,
+        &__pic {
+            margin-left: 60px;
+        }
     }
 }
 
@@ -167,6 +165,18 @@
         &__container_mobile {
             display: block;
             position: relative;
+        }
+
+        &__title {
+            &_mobile {
+                margin: 0 0 40px 18px;
+            }
+        }
+
+        &__text {
+            &_mobile {
+                margin: 0 18px 40px;
+            }
         }
     }
 }

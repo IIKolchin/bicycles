@@ -68,7 +68,28 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
+    .workout {
+        padding: 120px 80px 100px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .workout {
+        padding: 100px 60px 80px;
+        &__text {
+            margin-bottom: 50px;
+            margin-right: 5%;
+            font-size: 16px;
+        }
+
+        &__title {
+            font-size: 46px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
     .workout {
         display: block;
         padding: 40px 5.62% 60px;
@@ -91,6 +112,8 @@
 
         &__text_mobile {
             display: block;
+            font-size: 18px;
+            line-height: 28px;
         }
 
         &__links_mobile {
@@ -99,6 +122,19 @@
 
         &__link_mobile {
             display: block;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .workout {
+        &__text_mobile {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &__title {
+            font-size: 32px;
         }
     }
 }
